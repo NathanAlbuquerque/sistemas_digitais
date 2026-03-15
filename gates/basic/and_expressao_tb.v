@@ -4,22 +4,15 @@ module and_tb;
     reg a, b;
     wire y;
 
-    // Descomentar uut que irá testar
     and_expressao uut (
         .A(a),
         .B(b),
         .Y(y)
     );
 
-    // and_tabela uut (
-    //     .A(a),
-    //     .B(b),
-    //     .Y(y)
-    // );
-
     initial begin
-        $dumpfile("and_expression_test.vcd");
-        $dumpvars(0, and_tb);
+        $dumpfile("and_expressao.vcd");
+        $dumpvars(0, and_expressao_tb);
 
         $monitor("Tempo=%0d,  a=%b, b=%b, y=%b", $time, a, b, y);
 
