@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 
-module or_tb;
+module or_expressao_tb;
     reg a, b;
     wire y;
 

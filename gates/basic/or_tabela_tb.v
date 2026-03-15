@@ -1,25 +1,18 @@
 `timescale 1ns/1ps
 
-module or_tb;
+module or_tabela_tb;
     reg a, b;
     wire y;
 
-    // Descomentar uut que irá testar
-    or_expressao uut (
+    or_tabela uut (
         .A(a),
         .B(b),
         .Y(y)
     );
 
-    // or_tabela uut (
-    //     .A(a),
-    //     .B(b),
-    //     .Y(y)
-    // );
-
     initial begin
-        $dumpfile("or.vcd");
-        $dumpvars(0, or_testador);
+        $dumpfile("or_tabela.vcd");
+        $dumpvars(0, or_tabela_tb);
 
         $monitor("Tempo=%0d,  a=%b, b=%b, y=%b", $time, a, b, y);
 
